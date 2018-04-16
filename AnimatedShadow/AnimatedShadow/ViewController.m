@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "SKShadowBarLayer.h"
 
-@interface ViewController ()
+@interface ViewController ()<SKShadowBarLayerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) SKShadowBarLayer *shadow;
 @property (strong, nonatomic) SKShadowBarLayer *layer;
@@ -40,6 +40,8 @@
     self.layer.opacity = 1;
 
     [self.view.layer addSublayer:self.layer];
+    
+    self.layer.shadowDelegate = self;
 }
 - (IBAction)buttonAction:(UIButton *)sender {
     switch (sender.tag) {
@@ -63,7 +65,16 @@
             break;
     }
 }
-
+#pragma mark delegate
+- (void)animationDidStart {
+    NSLog(@"开始");
+}
+- (void)animationDidStop {
+    NSLog(@"停止");
+}
+- (void)animationDidComplete {
+    NSLog(@"完成");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

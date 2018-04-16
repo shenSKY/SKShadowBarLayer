@@ -18,10 +18,20 @@ typedef NS_ENUM(NSInteger, SKAnimationStatus) {
     SKAnimationStatusComplete
 };
 
+@protocol SKShadowBarLayerDelegate <NSObject>
+@optional
+- (void)animationDidStart;
+
+- (void)animationDidStop;
+
+- (void)animationDidComplete;
+
+@end
+
 @interface SKShadowBarLayer : CAShapeLayer
 
 @property (nonatomic, assign, readonly) SKAnimationStatus animatingStatus;//状态
-
+@property(nonatomic,weak)id<SKShadowBarLayerDelegate> shadowDelegate;
 /**
  Begin Animation
  @param duration Animation duration

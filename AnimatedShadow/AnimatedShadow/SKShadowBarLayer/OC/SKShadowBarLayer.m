@@ -24,6 +24,11 @@
     self.speed = 0.0;
     self.timeOffset = pausedTime;
     self.animatingStatus = SKAnimationStatusPause;
+    
+    if (self.shadowDelegate && [self.shadowDelegate respondsToSelector:@selector(animationDidStop)])
+    {
+        [self.shadowDelegate animationDidStop];
+    }
 }
 
 - (void)resumeAnimation
@@ -88,13 +93,21 @@
 {
     if (anim == [self animationForKey:@"progressAnimation"]) {
         self.animatingStatus = SKAnimationStatusAnimating;
+        if (self.shadowDelegate && [self.shadowDelegate respondsToSelector:@selector(animationDidStart)])
+        {
+            [self.shadowDelegate animationDidStart];
+        }
     }
 }
-
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     if ([anim valueForKey:@"progress"] && flag == YES) {
         self.animatingStatus = SKAnimationStatusComplete;
+        if (self.shadowDelegate && [self.shadowDelegate respondsToSelector:@selector(animationDidComplete)])
+        {
+            [self.shadowDelegate animationDidComplete];
+        }
+        [self removeAllAnimations];
     }
 }
 @end

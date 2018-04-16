@@ -14,6 +14,7 @@
 		5769DE3F20844B6C0093F99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5769DE3D20844B6C0093F99A /* LaunchScreen.storyboard */; };
 		5769DE4220844B6D0093F99A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5769DE4120844B6D0093F99A /* main.m */; };
 		5769DE50208476E30093F99A /* SKShadowBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5769DE4E208476E20093F99A /* SKShadowBarLayer.m */; };
+		5769DE5220848F7B0093F99A /* SKShadowBarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5769DE5120848F7B0093F99A /* SKShadowBarLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5769DE4B20844DBA0093F99A /* AnimatedShadow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimatedShadow-Bridging-Header.h"; sourceTree = "<group>"; };
 		5769DE4E208476E20093F99A /* SKShadowBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKShadowBarLayer.m; path = SKShadowBarLayer/OC/SKShadowBarLayer.m; sourceTree = "<group>"; };
 		5769DE4F208476E30093F99A /* SKShadowBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKShadowBarLayer.h; path = SKShadowBarLayer/OC/SKShadowBarLayer.h; sourceTree = "<group>"; };
+		5769DE5120848F7B0093F99A /* SKShadowBarLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SKShadowBarLayer.swift; path = SKShadowBarLayer/Swift/SKShadowBarLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				5769DE3620844B6A0093F99A /* ViewController.m */,
 				5769DE4F208476E30093F99A /* SKShadowBarLayer.h */,
 				5769DE4E208476E20093F99A /* SKShadowBarLayer.m */,
+				5769DE5120848F7B0093F99A /* SKShadowBarLayer.swift */,
 				5769DE3820844B6A0093F99A /* Main.storyboard */,
 				5769DE3B20844B6C0093F99A /* Assets.xcassets */,
 				5769DE3D20844B6C0093F99A /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 				5769DE3720844B6A0093F99A /* ViewController.m in Sources */,
 				5769DE4220844B6D0093F99A /* main.m in Sources */,
 				5769DE3420844B6A0093F99A /* AppDelegate.m in Sources */,
+				5769DE5220848F7B0093F99A /* SKShadowBarLayer.swift in Sources */,
 				5769DE50208476E30093F99A /* SKShadowBarLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

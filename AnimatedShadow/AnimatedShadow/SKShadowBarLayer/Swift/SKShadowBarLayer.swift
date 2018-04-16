@@ -17,9 +17,17 @@ enum SKAnimationStatus : Int {
     case complete
     
 }
+
+protocol SKShadowBarLayerDelegate: NSObjectProtocol {
+    func animationDidStart()
+    func animationDidStop()
+    func animationDidComplete()
+}
+
 class SKShadowBarLayer: CAShapeLayer ,CAAnimationDelegate {
 //    Animation Status
     private(set) var animatingStatus: SKAnimationStatus!
+    weak var shadowDelegate: SKShadowBarLayerDelegate!
 //    MARK: - Begin Animation
     func beginAnimation(duration: CGFloat) {
         startAnimtion(duration: duration, progress: 0)
@@ -30,6 +38,9 @@ class SKShadowBarLayer: CAShapeLayer ,CAAnimationDelegate {
         speed = 0.0
         timeOffset = pausedTime
         animatingStatus = SKAnimationStatus.pause
+        if shadowDelegate != nil {
+            shadowDelegate.animationDidStop()
+        }
     }
 //    MARK: - Resume Animation
     func resumeAnimation() {
@@ -76,11 +87,18 @@ class SKShadowBarLayer: CAShapeLayer ,CAAnimationDelegate {
     func animationDidStart(_ anim: CAAnimation) {
         if anim == animation(forKey: "progressAnimation") {
             animatingStatus = SKAnimationStatus.animating
+            if shadowDelegate != nil {
+                shadowDelegate.animationDidStart()
+            }
         }
     }
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        if anim == animation(forKey: "progress") && flag == true {
+        if (anim.value(forKey: "progress") != nil) && flag == true {
             animatingStatus = SKAnimationStatus.complete
+            if shadowDelegate != nil {
+                shadowDelegate.animationDidComplete()
+            }
+            removeAllAnimations()
         }
     }
 }

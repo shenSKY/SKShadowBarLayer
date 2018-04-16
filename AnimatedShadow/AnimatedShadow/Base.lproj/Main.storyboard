@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Furious7PosterLong" translatesAutoresizingMaskIntoConstraints="NO" id="zQF-Ea-30B">
+                                <rect key="frame" x="37.5" y="40" width="300" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zQF-Ea-30B" secondAttribute="height" multiplier="32:15" id="d5l-7A-d08"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTJ-al-kNe">
+                                <rect key="frame" x="37" y="193" width="31" height="30"/>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ek4-uH-O5w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1g-NF-oCX">
+                                <rect key="frame" x="196.5" y="193" width="31" height="30"/>
+                                <state key="normal" title="继续"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ofP-ar-U4n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmf-Ae-C3p">
+                                <rect key="frame" x="275.5" y="193" width="62" height="30"/>
+                                <state key="normal" title="重新开始"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fIU-aL-OV2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ptm-ZP-sVb">
+                                <rect key="frame" x="116" y="193" width="31" height="30"/>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y0t-2C-TMt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ptm-ZP-sVb" firstAttribute="centerY" secondItem="GTJ-al-kNe" secondAttribute="centerY" id="BQl-lL-cmg"/>
+                            <constraint firstItem="Ptm-ZP-sVb" firstAttribute="leading" secondItem="GTJ-al-kNe" secondAttribute="trailing" constant="48" id="I51-5J-8iS"/>
+                            <constraint firstItem="GTJ-al-kNe" firstAttribute="leading" secondItem="zQF-Ea-30B" secondAttribute="leading" id="N67-Ms-9PV"/>
+                            <constraint firstItem="zQF-Ea-30B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ULA-kX-3W6"/>
+                            <constraint firstItem="zQF-Ea-30B" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yqn-Cr-4o0"/>
+                            <constraint firstItem="GTJ-al-kNe" firstAttribute="top" secondItem="zQF-Ea-30B" secondAttribute="bottom" constant="12" id="bMk-Xq-ovE"/>
+                            <constraint firstItem="Fmf-Ae-C3p" firstAttribute="centerY" secondItem="GTJ-al-kNe" secondAttribute="centerY" id="mN7-rY-Zsz"/>
+                            <constraint firstItem="zQF-Ea-30B" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="mR6-2R-2xc"/>
+                            <constraint firstItem="X1g-NF-oCX" firstAttribute="centerY" secondItem="Fmf-Ae-C3p" secondAttribute="centerY" id="v9v-XE-hsP"/>
+                            <constraint firstItem="Fmf-Ae-C3p" firstAttribute="trailing" secondItem="zQF-Ea-30B" secondAttribute="trailing" id="x29-4x-dVJ"/>
+                            <constraint firstItem="Fmf-Ae-C3p" firstAttribute="leading" secondItem="X1g-NF-oCX" secondAttribute="trailing" constant="48" id="zX6-Z0-hBh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="zQF-Ea-30B" id="Dg3-fU-JdC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Furious7PosterLong" width="640" height="300"/>
+    </resources>
+</document>
